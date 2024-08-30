@@ -10,3 +10,4 @@ graficos = function(x, y, predicoes) {
   return(g)
 }
 
+

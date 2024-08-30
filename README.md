@@ -1,31 +1,55 @@
 
 # README
 
-\*como executar o produto:
+## Como Executar o Produto
 
-Para execução do produto, deve-se carregar a tabela de dados, em formato
-.csv na área de “configuracao.yaml”, basta entrar com o nome do arquivo
-em “dados: *nomedoarquivo.csv*”, escolher um dos dois “metodo: *linear*
-ou *LASSO*” (se nenhum método for escolhido, o método utilizado é o
-linear), especificar as variaveis de interesse, no seguinte formato:
-“Variaveis: Resposta:”x1”: *nomevariavel1* “x2”: *nomevariavel2*” e
-assim por diante, até que contenha todas as variáveis resposta de
-interesse.
+### Passo 1: Configuração Inicial
 
-Para encerrar a parte de “configuracao.yaml”, basta escolher a variável
-preditora ou a variável que tem interesse em realizar o estudo,
-“Preditoras:”y”: *nomevariavelresposta*”
+1.  Carregue os Dados:
 
-Após esta primeira parte, deve-se adicionar os valores das alterações
-que se deseja observarem “predicoes.json”, por exemplo:
+Na área de configuração, abra o arquivo configuracao.yaml. Insira o nome
+do arquivo de dados em formato .csv no campo dados. Por exemplo:
+
+- dados: “nomedoarquivo.csv”
+
+2.  Escolha o Método de Regressão:
+
+Especifique o método de regressão a ser utilizado em metodo. As opções
+disponíveis são linear e LASSO. Se não especificado, o método padrão
+será o linear. Exemplo:
+
+- metodo: “linear” (ou LASSO).
+
+3.  Defina as Variáveis de Interesse:
+
+Indique as variáveis preditoras no campo Variaveis. Use o seguinte
+formato:
+
+variaveis:  
+Resposta:  
+“x1”: “nomevariavel1”  
+“x2”: “nomevariavel2” Preditoras: “y”: “nomevariavelresposta”
+
+### Passo 2: Adicione as Previsões
+
+1.  Especifique as Alterações:
+
+Adicione os valores das alterações desejadas no arquivo predicoes.json.
+Por exemplo:
 
 \[ {“Petal.Length”: 4, “Petal.Width”: 3}\]
 
-isto é, para 4 unidades adicionadas de “Petal.Length” e 3 unidades
-adicionadas de “Petal.Width”, quanto o resultado final irá alterar.
+Neste exemplo, o sistema calculará como a alteração de 4 unidades em
+Petal.Length e 3 unidades em Petal.Width afetará o resultado final.
 
-Feito esses dois procedimentos, basta rodar o arquivo “main.R” e clicar
-na pasta “saidas” para observar os resultados.
+### Passo 3: Execute o Código
 
-**OBS:** Para a regressão LASSO, o usúario **DEVE** inserir pelo menos
-duas variáveis dependentes.
+1.  Rodando o Script:
+
+Execute o arquivo main.R. Os resultados serão gerados e poderão ser
+encontrados na pasta saidas.
+
+Observação Importante:
+
+Regressão LASSO: Para utilizar o método LASSO, é obrigatório inserir
+pelo menos duas variáveis dependentes.

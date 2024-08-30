@@ -1,0 +1,9 @@
+dados: iris.csv
+metodo: linear
+variaveis:
+  Resposta:
+    "x1": Sepal.Length
+    "x2": Sepal.Width
+    "x3": Petal.Length
+  Preditoras:
+    "y": Petal.Width

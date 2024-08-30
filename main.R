@@ -28,3 +28,4 @@ y = dados[config$variaveis$Preditoras$y]
 write_rds(fit, "saidas/fit.rds")
 write_json(toJSON(predict_function(pred)), "saidas/predicoes_regressao.json")
 ggsave("saidas/grafico.pdf", plot = graficos(x, y, predicoes))
+

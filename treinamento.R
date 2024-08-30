@@ -19,3 +19,4 @@ regression = function(metodo, preditora, respostas, dados) {
   }
   return(fit)
 }
+
