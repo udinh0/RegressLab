@@ -1,9 +1,12 @@
 library(glue)
-suppressPackageStartupMessages(library(tidyverse))
+library(readr)
+library(dplyr)
 library(yaml)
-source("scripts/treinamento.R")
-source("scripts/predicao.R")
-source("scripts/graficos.R")
+library(jsonlite)
+library(ggplot2)
+source("treinamento.R")
+source("predicao.R")
+source("graficos.R")
 
 config = read_yaml("configuracao.yaml")
 dados = read_csv(glue("entradas/{config$dados}"), show_col_types = FALSE)
@@ -28,4 +31,3 @@ y = dados[config$variaveis$Preditoras$y]
 write_rds(fit, "saidas/fit.rds")
 write_json(toJSON(predict_function(pred)), "saidas/predicoes_regressao.json")
 ggsave("saidas/grafico.pdf", plot = graficos(x, y, predicoes))
-
