@@ -11,7 +11,6 @@ regression = function(metodo, preditora, respostas, dados) {
   fit = cv.glmnet(x, y, alpha = 1)
   }
   
-  
   else {
     formula = as.formula(paste(glue("{preditora} ~"), paste(vec, collapse = " + ")))
     fit = lm(formula, data = dados)
