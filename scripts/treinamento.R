@@ -20,3 +20,4 @@ regression = function(metodo, preditora, respostas, dados) {
 
 
 
+
