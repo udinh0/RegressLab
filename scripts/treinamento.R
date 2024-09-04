@@ -1,10 +1,5 @@
 regression = function(metodo, preditora, respostas, dados) {
   
-  vec = numeric(length(respostas))
-  for (i in 1:length(respostas)) {
-    vec[i] = respostas[[i]]
-  }
-
   if (tolower(metodo) == "lasso") {
   x = as.matrix(dados[vec])
   y = as.matrix(dados[preditora[[1]]])
