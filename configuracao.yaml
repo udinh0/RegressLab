@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 dados: mtcars.csv
 metodo: lasso
 variaveis:
@@ -8,14 +7,4 @@ variaveis:
     "x3": wt
   Preditoras:
     "y": qsec
-=======
-dados: iris.csv
-metodo: linear
-variaveis:
-  Resposta:
-    "x1": Sepal.Length
-    "x2": Sepal.Width
-    "x3": Petal.Length
-  Preditoras:
-    "y": Petal.Width
->>>>>>> 4f6a844d7b49f2f635109e061a321f174c70657d
+
