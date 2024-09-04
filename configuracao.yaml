@@ -1,0 +1,9 @@
+dados: mtcars.csv
+metodo: lasso
+variaveis:
+  Resposta:
+    "x1": mpg
+    "x2": hp
+    "x3": wt
+  Preditoras:
+    "y": qsec
